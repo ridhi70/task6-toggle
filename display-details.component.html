@@ -1,0 +1,29 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Display details with toggle button</title>
+</head>
+<body>
+	<div class="text-center"> 
+		<button mat-raised-button color="accent" (click)="toggle()">{{buttonName}}</button><br><br><br>
+	</div>
+	
+
+<p *ngIf="display_details">
+	  	 <b> "Hi, I am Ridhi S Jain, born and brought up in Shimoga,Karnataka.I studied my primary and high school in Mandara Jnanadayini School and Pre-University in Mandara Jnanadayini PU College. I completed by BE in Electronics and Communication Engineering(ECE) from Jawaharlal Nehru National College of Engineering(JNNCE),Shimoga. I got my first job in 2019 in SLK Software as a Trainee-Software."</b>
+</p>
+
+
+<div [ngStyle]="{'color':changeColor===false?'black':'white','background-color':changeColor===false?'white':'blue'}">
+
+<p *ngIf="changeColor ; else samecolor">
+Click count:{{count}}
+</p>
+
+<ng-template #samecolor>
+	Click count:{{count}}</ng-template>
+</div>
+
+</body>
+</html>
+
